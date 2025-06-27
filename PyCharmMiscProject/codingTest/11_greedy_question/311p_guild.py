@@ -13,6 +13,7 @@ while len(li) > 0 and max(li) <= len(li):
         li.pop(li.index(y))
     result += 1
 
+# 공포도 1이 남을 경우
 while len(li) > 0 and min(li) == 1:
     z = min(li)
     li.pop(li.index(z))
