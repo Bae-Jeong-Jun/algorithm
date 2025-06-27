@@ -5,16 +5,18 @@ N = int(input())
 li = list(map(int, input().split()))
 
 result = 0
-while len(li):
-    m = max(li)
-    if m != 1:
-        li.pop(li.index(m))
-        for _ in range(m-1):
-            n = max(li)
-            li.pop(li.index(n))
-        result += 1
-    else:
-        li.pop(li.index(m))
-        result += 1
+while len(li) > 0 and max(li) <= len(li):
+    x = max(li)
+    li.pop(li.index(x))
+    for _ in range(x-1):
+        y = max(li)
+        li.pop(li.index(y))
+    result += 1
 
+while len(li) > 0 and min(li) == 1:
+    z = min(li)
+    li.pop(li.index(z))
+    result += 1
+
+print(li)
 print(result)
