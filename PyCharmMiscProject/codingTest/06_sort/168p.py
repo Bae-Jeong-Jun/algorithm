@@ -1,4 +1,5 @@
-# 퀵 정렬
+# 퀵 정렬 O(nlogn)
+# 이미 데이터가 정렬돼있는 경우 느리게 동작 최악의 경우 O(n^2)
 array = [5,9,0,3,1,6,2,4,8]
 
 def quick_sort(array, start, end):
